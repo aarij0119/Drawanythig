@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#whiteboard');
 const context = canvas.getContext('2d')
 const buttons = document.querySelectorAll('#btn1');
-
+const circle = document.querySelector('#circle')
 
 
 let isDraw = false;
