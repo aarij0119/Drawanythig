@@ -15,18 +15,29 @@
         .shape-btn {
             margin: 0 4px;
         }
+      
+
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <div class="flex items-center justify-center bg-gray-700 w-full h-screen">
+      
         <div class="w-5/6 h-5/6 bg-zinc-900 grid grid-cols-12">
-            <div class="col-span-3  bg-zinc-900 items-start pt-5 px-1 bg">
-                <div class="flex">
+          
+            <div class="col-span-3  bg-zinc-900 items-start pt-5 px-1 bg relative">
+                <div class="absolute bottom-1 flex flex-col gap-2">
+                    <button class="bg-red-700 w-[19rem] py-2 font-bold texl-lg text-white rounded" id="clear">Clear</button>
+                    <button id="fill" class="shape-btn bg-blue-500 text-white px-2 py-2 rounded">Fill</button>
+
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button id="line" class="shape-btn bg-red-500 text-white px-2 py-2 rounded">Line</button>
                     <button id="triangle" class="shape-btn bg-blue-500 text-white px-2 py-2 rounded">Triangle</button>
                     <button id="square" class="shape-btn bg-green-500 text-white px-2 py-2 rounded">Square</button>
-                    <button id="circle" class="shape-btn bg-red-500 text-white px-2 py-2 rounded" id="circle">Circle</button>
+                    <button id="circle" class="shape-btn bg-red-500 text-white px-2 py-2 rounded">Circle</button>
                     <button id="rectangle"
                         class="shape-btn bg-yellow-500 text-white px-2 py-2 rounded">Rectangle</button>
                 </div>
@@ -42,6 +53,11 @@
                         <button class="w-8 flex items-center justify-center h-8 bg-pink-600 rounded-full text-white" value="11" id="btn1">7</button>
                     </div>
                 </div>
+                <div>
+                    <h2 class="text-white font-bold mt-2 mb-2">Colors</h2>
+                    <input type="color" id="color" class="w-1/2 border-0" style="outline: none;">
+                 </div>
+                 
             </div>
             <div class="col-span-9 bg-zinc-800">
                 <canvas class="w-full h-full" id="whiteboard" class="bg-white">
